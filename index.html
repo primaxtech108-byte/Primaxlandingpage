@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primax Tech - Your CCTV Partner</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #004d40; /* Deep Security Green */
+            --secondary: #ff9800; /* Alert/Action Orange */
+            --whatsapp: #25D366; /* WhatsApp Green */
+            --light: #f4f4f4;
+            --dark: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        /* Call Button Style */
+        .nav-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* WhatsApp Button Style */
+        .cta-btn {
+            background: var(--whatsapp);
+            color: var(--white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: 0.3s;
+            display: inline-block;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            background: #128C7E;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 5%;
+            background: var(--light);
+            text-align: center;
+        }
+
+        .features h2 {
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 5%;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .service-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .service-text {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .service-image {
+            flex: 1;
+            background: #ddd;
+            height: 300px;
+            min-width: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .form-box {
+            background: var(--white);
+            color: var(--dark);
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Changed this button to an anchor tag for mailto functionality */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--secondary); /* Changed to Orange to stand out */
+            color: var(--white);
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .submit-btn:hover {
+            background: #e68900;
+        }
+
+        /* Footer & Address */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 5%;
+        }
+        
+        .address-box {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #555;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .service-row { flex-direction: column; }
+            .service-row:nth-child(even) { flex-direction: column-reverse; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Primax<span>Tech</span></div>
+        <a href="tel:+918511711394" class="nav-btn">📞 Call Now</a>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <h1>We Watch, So You Don't Have To.</h1>
+            <p>Professional CCTV installation, maintenance, and security solutions for your home and business. Experience peace of mind with Primax Tech.</p>
+            
+            <a href="https://wa.me/918511711394?text=Hi%20Primax%20Tech,%20I%20am%20interested%20in%20a%20CCTV%20quote." class="cta-btn">
+                💬 Get A Free Quote (WhatsApp)
+            </a>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Why Choose Primax Tech?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Expert Installation</h3>
+                <p>Our certified technicians ensure clean, wire-free looks and optimal camera angles.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👁️</div>
+                <h3>Remote Monitoring</h3>
+                <p>View your property from anywhere in the world on your smartphone or laptop.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>24/7 Support</h3>
+                <p>We don't just install; we maintain. We are always just one call away.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        
+        <div class="service-row">
+            <div class="service-text">
+                <h3>🏠 Home Security Systems</h3>
+                <p>Protect your family with high-definition night-vision cameras. We offer doorbell cameras, motion sensors, and complete perimeter surveillance designed for residential needs.</p>
+            </div>
+            <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1558002038-1091a1661116?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="service-text">
+                <h3>🏢 Commercial Surveillance</h3>
+                <p>Secure your assets and employees. We provide scalable solutions for offices, warehouses, and retail shops, including IP cameras and NVR storage systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Secure Your Property Today</h2>
+        <p>Click the button below to send us an email inquiry and we will call you back.</p>
+        
+        <div class="form-box">
+            <div class="form-group">
+                <label>This section now works as a *Click-to-Email* link.</label>
+                <p style="font-size:0.9rem; color:#666;">It eliminates the server error you were facing and still gets the inquiry to your email.</p>
+            </div>
+            
+            <a href="mailto:primaxtech108@gmail.com?subject=New%20CCTV%20Inquiry%20from%20Landing%20Page&body=Hello%20Primax%20Tech,%0A%0AI%20am%20interested%20in%20your%20services.%20Please%20provide%20a%20callback.%0A%0A- Name:%0A- Phone:%0A- Service%20Needed:%0A- Best%20Time%20to%20Call:" class="submit-btn">
+                📧 Send Email Inquiry
+            </a>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Primax Tech. All Rights Reserved.</p>
+        
+        <div class="address-box">
+            <p><strong>📍 OFFICE ADDRESS:</strong></p>
+            <p>FF, Shop No. 007, Shivam Appartment</p>
+            <p>Nr Hotel Vrinn, Makarpura Airforce Station Road</p>
+            <p>Makarpura, Vadodara - 390010</p>
+            <p>📞 +91 85117 11394</p>
+        </div>
+    </footer>
+
+</body>
+</html>
