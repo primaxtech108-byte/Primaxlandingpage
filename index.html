@@ -140,9 +140,81 @@
             margin-bottom: 1rem;
         }
 
+        /* New Product Scroll Section Styles */
+        .product-scroll {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+
+        .product-scroll h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: scroll; /* Makes the content horizontal and scrollable */
+            padding: 1rem 5%;
+            gap: 1.5rem;
+            /* Optional: Hide scrollbar for cleaner look (iOS/Safari) */
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Optional: Hide scrollbar (Chrome/Edge/Firefox) */
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        .product-card {
+            flex-shrink: 0; /* Prevents cards from shrinking */
+            width: 280px; /* Fixed width for each card */
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            min-height: 40px; /* Ensures description space is consistent */
+        }
+
+        .price-tag {
+            font-weight: bold;
+            color: var(--secondary);
+            font-size: 1.3rem;
+        }
+        /* End Product Scroll Section Styles */
+
+
         /* Services Section */
         .services {
             padding: 4rem 5%;
+            background: var(--light); /* Changed background for separation */
         }
 
         .services h2 {
@@ -290,7 +362,105 @@
             </div>
         </div>
     </section>
+    
+    <section class="product-scroll">
+        <h2>🛡️ हमारे टॉप प्रोडक्ट्स</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #555;">लेटेस्ट और भरोसेमंद सुरक्षा कैमरे, DVR, और एक्सेसरीज।</p>
+        <div class="scroll-container">
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1632292429471-a472c676d296?w=400&auto=format&fit=crop&q=60" alt="CP Plus Indoor WiFi Camera">
+                <div class="product-info">
+                    <h3>CP Plus 3MP Indoor WiFi Cam</h3>
+                    <p>Day/Night Vision, 2-Way Talk, Intrusion Alert. (CP Plus / Dahua)</p>
+                    <div class="price-tag">₹ 2,100 - ₹ 3,500</div>
+                </div>
+            </div>
 
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1598460670356-0746e8c75dbf?w=400&auto=format&fit=crop&q=60" alt="Outdoor WiFi Camera">
+                <div class="product-info">
+                    <h3>Outdoor WiFi Camera (Weatherproof)</h3>
+                    <p>3MP HD, Night Vision, Motion Tracking, Weather-Sealed Design.</p>
+                    <div class="price-tag">₹ 3,800 - ₹ 5,500</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1628174780612-4a0050d44e58?w=400&auto=format&fit=crop&q=60" alt="Solar WiFi Camera">
+                <div class="product-info">
+                    <h3>Solar Powered WiFi Camera</h3>
+                    <p>100% वायरलेस, बैटरी/सोलर चार्जिंग, रिमोट मॉनिटरिंग।</p>
+                    <div class="price-tag">₹ 6,500 - ₹ 9,500</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1621640523098-9043e0618037?w=400&auto=format&fit=crop&q=60" alt="4G SIM Camera">
+                <div class="product-info">
+                    <h3>4G SIM Based Camera (Outdoor/Indoor)</h3>
+                    <p>वाय-फाई की जरूरत नहीं, 4G सिम सपोर्ट, रिमोट एक्सेस।</p>
+                    <div class="price-tag">₹ 7,200 - ₹ 11,500</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593060855239-1ffb4709849b?w=400&auto=format&fit=crop&q=60" alt="2.4MP Dome Camera">
+                <div class="product-info">
+                    <h3>2.4MP Dome Camera (Indoor)</h3>
+                    <p>HD Day/Night Vision. Brands: CP Plus, Dahua, Hikvision, Coreprix.</p>
+                    <div class="price-tag">₹ 850 - ₹ 2,050</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593060855239-1ffb4709849b?w=400&auto=format&fit=crop&q=60" alt="2.4MP Bullet Camera">
+                <div class="product-info">
+                    <h3>2.4MP Bullet Camera (Outdoor)</h3>
+                    <p>HD Day/Night Vision, IP67 Weatherproof. (Same Brands)</p>
+                    <div class="price-tag">₹ 850 - ₹ 2,050</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1632292429471-a472c676d296?w=400&auto=format&fit=crop&q=60" alt="IP Camera Range">
+                <div class="product-info">
+                    <h3>IP Camera Range (HD/4K)</h3>
+                    <p>Superior quality Network Cameras. CP Plus, Dahua, Hikvision, Coreprix.</p>
+                    <div class="price-tag">Price Varies</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1601018868661-d7031267b141?w=400&auto=format&fit=crop&q=60" alt="DVR/NVR System">
+                <div class="product-info">
+                    <h3>DVR / NVR Systems (4/8/16 Ch.)</h3>
+                    <p>Recording Units for Wired/IP Cams. (CP Plus, Dahua, Hikvision).</p>
+                    <div class="price-tag">₹ 2,400 - ₹ 5,600</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1550007823-ce65ef8c1b69?w=400&auto=format&fit=crop&q=60" alt="Surveillance HDD">
+                <div class="product-info">
+                    <h3>Surveillance Hard Disks (500GB to 4TB)</h3>
+                    <p>Seagate SkyHawk, WD Purple, Toshiba Surveillance HDD.</p>
+                    <div class="price-tag">₹ 980 - ₹ 8,000</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1588825867160-5f21226593a8?w=400&auto=format&fit=crop&q=60" alt="Router and Cable">
+                <div class="product-info">
+                    <h3>3+1 Copper Cable / Cat 6 Cable / 4G Router</h3>
+                    <p>Coaxial Cable, Cat 6 Indoor/Outdoor, Wireless 4G Routers.</p>
+                    <div class="price-tag">₹ 850 - ₹ 1,320</div>
+                </div>
+            </div>
+
+        </div>
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #777;">*सभी मूल्य अनुमानित हैं और स्टॉक की उपलब्धता पर निर्भर करते हैं।</p>
+    </section>
     <section class="services">
         <h2>Our Services</h2>
         
@@ -313,12 +483,11 @@
 
     <section id="contact" class="contact">
         <h2>Secure Your Property Today</h2>
-        <p>Click the button below to send us an email inquiry and we will call you back.</p>
+        <p>Click the button below to send us an email inquiry or contact us on WhatsApp.</p>
         
         <div class="form-box">
             <div class="form-group">
-                <label>This section now works as a *Click-to-Email* link.</label>
-                <p style="font-size:0.9rem; color:#666;">It eliminates the server error you were facing and still gets the inquiry to your email.</p>
+                <label>अगर आप तुरंत बात करना चाहते हैं, तो व्हाट्सएप या कॉल करें।</label>
             </div>
             
             <a href="mailto:primaxtech108@gmail.com?subject=New%20CCTV%20Inquiry%20from%20Landing%20Page&body=Hello%20Primax%20Tech,%0A%0AI%20am%20interested%20in%20your%20services.%20Please%20provide%20a%20callback.%0A%0A- Name:%0A- Phone:%0A- Service%20Needed:%0A- Best%20Time%20to%20Call:" class="submit-btn">
@@ -342,3 +511,4 @@
 
 </body>
 </html>
+
