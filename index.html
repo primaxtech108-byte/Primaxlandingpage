@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primax Tech - Your CCTV Partner</title>
     <style>
-        /* (CSS code is the same as before, skipping for brevity) */
+        /* --- CSS STYLES --- */
         :root {
             --primary: #004d40;
             --secondary: #ff9800;
@@ -154,25 +154,21 @@
 
         .scroll-container {
             display: flex;
-            overflow-x: scroll; /* Makes the content horizontal and scrollable */
+            overflow-x: scroll;
             padding: 1rem 5%;
             gap: 1.5rem;
-            /* Optional: Hide scrollbar for cleaner look (iOS/Safari) */
             -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
         
-        /* Optional: Hide scrollbar (Chrome/Edge/Firefox) */
         .scroll-container::-webkit-scrollbar {
             display: none;
         }
-        .scroll-container {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
 
         .product-card {
-            flex-shrink: 0; /* Prevents cards from shrinking */
-            width: 280px; /* Fixed width for each card */
+            flex-shrink: 0;
+            width: 280px;
             background: var(--light);
             border-radius: 10px;
             overflow: hidden;
@@ -207,11 +203,30 @@
             font-weight: bold;
             color: var(--secondary);
             font-size: 1.3rem;
+            display: block;
+            margin-bottom: 1rem; /* Added space before button */
+        }
+        
+        /* New Inquiry Button Style */
+        .inquiry-btn {
+            background: var(--whatsapp);
+            color: var(--white);
+            padding: 0.7rem 1rem;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .inquiry-btn:hover {
+            background: #128C7E;
         }
         /* End Product Scroll Section Styles */
 
 
-        /* Services Section */
+        /* Services Section (Rest of the CSS is the same) */
         .services {
             padding: 4rem 5%;
             background: var(--light);
@@ -323,7 +338,22 @@
             .service-row:nth-child(even) { flex-direction: column-reverse; }
         }
     </style>
-</head>
+    <script>
+        function sendInquiry(productName) {
+            // Your WhatsApp number (918511711394) is hardcoded here
+            const encodedProductName = encodeURIComponent(productName);
+            
+            // The automated message structure
+            const message = `Hello Primax Tech, I am interested in this product: ${productName}. Please share the current price and details.`;
+            
+            const encodedMessage = encodeURIComponent(message);
+            
+            const whatsappUrl = `https://wa.me/918511711394?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+    </head>
 <body>
 
     <nav>
@@ -374,6 +404,9 @@
                     <h3>CP Plus 3MP Indoor WiFi Cam</h3>
                     <p>Day/Night Vision, 2-Way Talk, Intrusion Alert. (CP Plus / Dahua)</p>
                     <div class="price-tag">₹ 2,100 - ₹ 3,500</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('CP Plus 3MP Indoor WiFi Cam')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -383,6 +416,9 @@
                     <h3>Outdoor WiFi Camera (Weatherproof)</h3>
                     <p>3MP HD, Night Vision, Motion Tracking, Weather-Sealed Design.</p>
                     <div class="price-tag">₹ 3,800 - ₹ 5,500</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('Outdoor WiFi Camera (Weatherproof)')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -392,6 +428,9 @@
                     <h3>Solar Powered WiFi Camera</h3>
                     <p>100% Wireless, Battery/Solar Charging, Remote Monitoring.</p>
                     <div class="price-tag">₹ 6,500 - ₹ 9,500</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('Solar Powered WiFi Camera')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -401,6 +440,9 @@
                     <h3>4G SIM Based Camera (Outdoor/Indoor)</h3>
                     <p>No Wi-Fi needed, 4G SIM Support, Remote Access.</p>
                     <div class="price-tag">₹ 7,200 - ₹ 11,500</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('4G SIM Based Camera')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -410,6 +452,9 @@
                     <h3>2.4MP Dome Camera (Indoor)</h3>
                     <p>HD Day/Night Vision. Brands: CP Plus, Dahua, Hikvision, Coreprix.</p>
                     <div class="price-tag">₹ 850 - ₹ 2,050</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('2.4MP Dome Camera (Indoor)')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -419,6 +464,9 @@
                     <h3>2.4MP Bullet Camera (Outdoor)</h3>
                     <p>HD Day/Night Vision, IP67 Weatherproof. (Same Brands)</p>
                     <div class="price-tag">₹ 850 - ₹ 2,050</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('2.4MP Bullet Camera (Outdoor)')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -428,6 +476,9 @@
                     <h3>IP Camera Range (HD/4K)</h3>
                     <p>Superior quality Network Cameras. CP Plus, Dahua, Hikvision, Coreprix.</p>
                     <div class="price-tag">Price Varies</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('IP Camera Range (HD/4K)')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -437,6 +488,9 @@
                     <h3>DVR / NVR Systems (4/8/16 Ch.)</h3>
                     <p>Recording Units for Wired/IP Cams. (CP Plus, Dahua, Hikvision).</p>
                     <div class="price-tag">₹ 2,400 - ₹ 5,600</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('DVR / NVR Systems (4/8/16 Ch.)')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -446,6 +500,9 @@
                     <h3>Surveillance Hard Disks (500GB to 4TB)</h3>
                     <p>Seagate SkyHawk, WD Purple, Toshiba Surveillance HDD.</p>
                     <div class="price-tag">₹ 980 - ₹ 8,000</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('Surveillance Hard Disks (HDD)')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
@@ -455,6 +512,9 @@
                     <h3>3+1 Copper Cable / Cat 6 Cable / 4G Router</h3>
                     <p>Coaxial Cable, Cat 6 Indoor/Outdoor, Wireless 4G Routers.</p>
                     <div class="price-tag">₹ 850 - ₹ 1,320</div>
+                    <button class="inquiry-btn" onclick="sendInquiry('3+1 Copper Cable / Cat 6 Cable / 4G Router')">
+                        Send Inquiry on WhatsApp 💬
+                    </button>
                 </div>
             </div>
 
